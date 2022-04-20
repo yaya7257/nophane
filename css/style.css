@@ -1,0 +1,675 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+}
+
+.wrap{
+    width: 100%;
+    height: auto;
+}
+.header{
+    background: rgba(255,255,255,0.9);
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+.header .menushow{
+    display: none;
+    position: absolute;
+    font-size: 40px;
+    right: 10px;
+    line-height: 70px;
+}
+.header .menushow a{
+    color: rgb(73, 38, 38);
+}
+.header img{
+    float: left;
+    width: auto;
+    padding: 10px;
+}
+.menu{
+    float: right;
+}
+.menu li{
+    float: left;
+}
+.menu a{
+    font-weight: 900;
+    display: block;
+    padding: 24px 30px;
+    font-size: 20px;
+    color: rgb(73, 38, 38);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.menu a:hover{
+    color: rgb(246, 112, 112);
+}
+
+.cart{
+    display: none;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgb(126, 44, 44);
+    border-radius: 100%;
+    color: white;
+    font-size: 35px;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cart:hover{
+    background: rgb(246, 112, 112);
+}
+@media (max-width:650px){
+    .header{
+        width: 100%;
+        height: 70px;
+    }
+    .header .menushow{
+        display: block;
+    }
+    .menu{
+        max-height: 0px;
+        float: none;
+        position: absolute;
+        top: 71px;
+        width: 100%;
+        overflow: hidden;
+        transition: 0.8s;
+    }
+    .menu li{
+        float: none;
+        text-align: center;
+    }
+    .menu a{
+        background: rgba(255,255,255,0.9);
+    }
+    .show-menu .menu{
+        max-height: 200px;
+    }
+    .showchar{
+        display: none;
+    }
+    .cart{
+        display: block;
+    }
+}
+
+.content{
+    width: 100%;
+    height: auto;
+}
+.content .top{
+    width: 100%;
+    height: 800px;
+    background-image: url("../images/bg4.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
+}
+.content .top2{
+    height: 400px;
+    clip-path: none;
+    background-position: bottom;
+    background-image: url("../images/faq.jpg");
+}
+.top .tittle{
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 60px;
+    text-shadow: 3px 3px 5px black;
+}
+.top2 .tittle{
+    top: 220px;
+}
+@media(max-width:450px){
+    .top2 .tittle{
+        font-size: 26px;
+    }
+}
+.btn{
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    background: rgb(211, 61, 61);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: rgb(255, 98, 98);
+}
+
+.content .about{
+    max-width: 100%;
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+}
+.aboutus{
+    height: auto;
+    width: 30%;
+    font-size: 20px;
+    text-align: left;
+    line-height: 30px;
+    padding-top: 40px;
+}
+.aboutus h1{
+    color: rgb(48, 23, 23);
+    font-size: 40px;
+}
+.aboutus hr{
+    border: solid 2px rgb(139, 92, 92);
+    width: 130%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.aboutus p{
+    color: rgb(73, 38, 38);
+}
+.aboutimg{
+    max-width: 400px;
+    box-shadow: 30px -20px 0px rgb(139, 92, 92);
+}
+@media(max-width:1000px){
+    .aboutus{
+        width: 40%;
+    }
+}
+@media(max-width:768px){
+    .content .about{
+        display: block;
+        margin: 100px auto;
+    }
+    .aboutus{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .aboutus hr{
+        width: 80%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .aboutimg{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+.content .qa{
+    width: 60%;
+    margin: 50px auto;
+}
+.qa li{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.qa h1{
+    padding: 10px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+.qa h1:hover,.active{
+    color: white;
+    background: rgb(163, 113, 113);;
+}
+.qa p{
+    display: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    line-height: 24px;
+    color: white;
+    background: rgb(163, 113, 113);;
+}
+@media(max-width:1300px){
+    .content .qa{
+        width: 80%;
+    }
+}
+.content .youcan{
+    width: 60%;
+    margin: 30px auto;
+    font-size: 30px;
+    position: relative;
+}
+.youcan h1{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    background: white;
+    color: rgb(73, 38, 38);
+    line-height: 40px;
+}
+.youcan .line{
+    border: solid 1px rgb(139, 92, 92);
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    z-index: -1;
+}
+.todo{
+    width: 80%;
+    margin: 40px auto;
+}
+.todo .these{
+    display: flex;
+    justify-content: center;
+}
+.these li{
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    color: rgb(73, 38, 38);
+}
+.these li div{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.these li img{
+    transition: 0.7s;
+}
+.these li img:hover{
+    transform:scale(1.2);
+}
+.these li h1{
+    font-size: 26px;
+    padding: 20px 0px;
+    font-weight: 900;
+}
+.these li p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 2em;
+    padding: 0px 40px;
+}
+@media(max-width:1300px){
+    .these li div{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media(max-width:1050px){
+    .todo .these{
+        flex-wrap: wrap;
+    }
+    .these li{
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .these li div{
+        width: 400px;
+        height: 400px;
+    }
+    .these li p{
+        padding: 0px 100px;
+    }
+}
+@media(max-width:550px){
+    .these li{
+        padding-bottom: 20px;
+    }
+    .these li div{
+        width: 250px;
+        height: 250px;
+    }
+    .these li p{
+        padding: 0px 30px;
+    }
+    .content .youcan{
+        width: 80%;
+    }
+    .youcan h1{
+        width: 280px;
+    }
+}
+.content .stayhere{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-image: url("../images/stayhere.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+    position: relative;
+    margin-top: 50px;
+}
+.stayhere h1{
+    width: 100%;
+    position: absolute;
+    text-align: right;
+    top: 200px;
+    right: 300px;
+    color: white;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    text-shadow: 3px 3px 5px black;
+}
+@media(max-width:1050px){
+    .stayhere h1{
+        text-align: center;
+        right: 0;
+        left: 0;
+        font-size: 30px;
+    }
+}
+.content .newbook{
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+.newbook h1{
+    color: rgb(48, 23, 23);
+    font-size: 40px;
+}
+.newbook hr{
+    border: solid 2px rgb(139, 92, 92);
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.newbook ul{
+    display: flex;
+    justify-content: center;
+}
+.newbook li{
+    margin: 20px;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+}
+.newbook img{
+    height: 100%;
+}
+.newbook div{
+    background: rgba(0,0,0,0.7);
+    height: 180px;
+    width: 100%;
+    position: absolute;
+    bottom: -130px;
+    padding: 10px;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+.newbook li:hover div{
+    bottom: 0px;
+}
+.newbook div h1{
+    padding: 0px;
+    color: white;
+    font-size: 30px;
+}
+.newbook div hr{
+    border: solid 1px white;
+    width: 90%;
+}
+.newbook div h2{
+    color: white;
+    font-size: 26px;
+    line-height: 30px;
+}
+.newbook div p{
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+}
+.newbook .btn{
+    margin-top: 20px;
+}
+@media (max-width:1050px){
+    .content .newbook{
+        width: 70%;
+        margin: 80px auto;
+    }
+    .newbook ul{
+        display: block;
+    }
+    .newbook li{
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .newbook img{
+        float: left;
+        width: 40%;
+        height: auto;
+    }
+    .newbook div{
+        background: none;
+        position: static;
+        height: auto;
+        width: 50%;
+        float: right;
+        padding: 20px;
+    }
+    .newbook div h1{
+        color: rgb(48, 23, 23);
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .newbook div hr{
+        display: none;
+    }
+    .newbook div h2{
+        color: rgb(48, 23, 23);
+        font-size: 22px;
+    }
+    .newbook div p{
+        color: rgb(48, 23, 23);
+        font-size: 16px;
+    }
+}
+@media (max-width:768px){
+    .newbook li{
+        height: auto;
+        width: auto;
+        display: block;
+    }
+    .newbook img{
+        float: none;
+        width: 70%;
+        height: auto;
+    }
+    .newbook div{
+        display: inline-block;
+        float: none;
+        width: 80%;
+        padding-top: 10px;
+    }
+}
+.content .infomail{
+    width: 100%;
+    background: rgb(190, 161, 161);
+    text-align: center;
+}
+.infomail h1{
+    display: inline;
+    line-height: 100px;
+    font-size: 24px;
+    font-weight: 900;
+    color: rgb(73, 38, 38);
+}
+.infomail input{
+    border: white solid 2px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(73, 38, 38);
+    margin-right: 0;
+}
+.infomail input:focus{
+    border: solid 2px rgb(73, 38, 38);
+    outline: 0;
+}
+.infomail .btn{
+    border: none;
+    font-size: 22px;
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+    margin-left: 0;
+    background: rgb(73, 38, 38);
+}
+@media(max-width:900px){
+    .infomail h1{
+        display: block;
+        font-size: 24px;
+    }
+    .infomail input{
+        margin-bottom: 20px;
+    }
+    .infomail h1{
+        line-height: 80px;
+    }
+}
+@media(max-width:500px){
+    .infomail h1{
+        display: block;
+        font-size: 18px;
+    }
+    .infomail input{
+        font-size: 16px;
+    }
+    .infomail .btn{
+        border: none;
+        font-size: 15px;
+    }
+}
+.footer{
+    width: 100%;
+    background: rgb(73, 38, 38);
+}
+.footer div{
+    width: 60%;
+    margin: 0px auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer .infomation{
+    float: left;
+    width: 70%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+}
+.footer .connection{
+    display: inline-block;
+    text-align: right;
+    width: 30%;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+.connection a{
+    color: white;
+    transition: 0.3s;
+}
+.connection a:hover{
+    font-size: 36px;
+    color: rgb(190, 161, 161);
+}
+.footer p{
+    clear: both;
+}
+@media(max-width:1100px){
+    .footer div{
+        width: 80%;
+    }
+}
+@media(max-width:820px){
+    .footer div{
+        width: 100%;
+    }
+}
+@media(max-width:768px){
+    .footer .infomation{
+        width: 100%;
+        float: none;
+    }
+    .footer .connection{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .footer p{
+        line-height: 22px;
+    }
+}
