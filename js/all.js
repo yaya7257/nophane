@@ -104,6 +104,7 @@ $(document).ready(function () {
                 num: 0,
                 sum: 0,
                 cartOpen: false,
+                cateOpen: false,
             }
         },
         methods: {
@@ -124,6 +125,9 @@ $(document).ready(function () {
                 });
                 this.sum = total
                 this.num = number
+            },
+            allCate() {
+                this.cateOpen = !this.cateOpen
             },
         },
 

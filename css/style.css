@@ -215,6 +215,21 @@ body{
         
     }
 }
+.smallcate {
+    height: auto;
+    width: 80px;
+    position: fixed;
+    left: 20px;
+    bottom: 0px;
+    background: rgb(255, 230, 198);
+    border-radius: 10px;
+    color: rgb(122, 75, 75);
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
 .content{
     width: 100%;
     height: auto;
