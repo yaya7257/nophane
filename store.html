@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon2.png">
+    <script src="https://kit.fontawesome.com/da14380fcf.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.2/vue.global.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/all.js"></script>
+    <title>諾芬尼書城</title>
+</head>
+<body>
+    <div class="wrap" id="wrap">
+        <div class="header">
+            <div class="menushow"><a href=""><i class="fa-solid fa-bars"></i></a></div>
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <ul class="menu">
+                <li><a href="store.html">商店</a></li>
+                <li><a href="faq.html">Q&A</a></li>
+                <li class="showchar">
+                    <a href="" @click="openCart">
+                        購物車<i class="fa-solid fa-cart-shopping"></i>
+                        <div v-if="num > 0">{{num}}</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="buycart" v-if="cartOpen">
+            <table>
+                <tr>
+                    <th>書名</th>
+                    <th>金額</th>
+                    <th>刪除</th>
+                </tr>
+                <tr v-for="item in carts">
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}元</td>
+                    <td><i class="fa-solid fa-trash"></i></td>
+                </tr>
+            </table>
+            <p>共{{num}}本書，總金額 {{sum}} 元</p>
+            <button type="button">結帳</button>
+        </div>
+        <div class="content" id="content">
+            <div class="top top3">
+                <div class="tittle">
+                    <h1 data-aos="zoom-in" data-aos-duration="1500">現在就尋找我的書</h1>
+                </div>
+            </div>
+            <div class="books">
+                <div class="category">
+                    <ul>
+                        <li v-for="category in category">{{category}}</li>
+                    </ul>
+                </div>
+                <div class="products">
+                    <ul>
+                        <li v-for="products in products">
+                            <img :src="products.pic" alt="" :title="products.name">
+                            <h1>{{products.name}}</h1>
+                            <p>{{products.price}}元</p>
+                            <i @click="addToCart(products)" class="fa-solid fa-cart-plus"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="infomail">
+                <form action="index.html">
+                    <h1>想要知道更多店內資訊？現在就留下的你的</h1>
+                    <input type="email" placeholder="e-mail">
+                    <input class="btn" type="submit" value="➜">
+                </form>
+            </div>
+        </div>
+        <div class="cart" @click="openCart"><i class="fa-solid fa-cart-shopping"></i><div v-if="num > 0">{{num}}</div></div>
+        <div class="footer">
+            <div>
+                <div class="infomation">
+                    <img src="images/logow.png" alt="">
+                    <p>諾芬尼書城
+                    <br>顧客服務專線：04-12345678
+                    <br>傳真：04-87654321
+                    <br>地址：台中市南屯區很大的路九段十二巷1弄18號
+                    <br>聯絡我們：nophanebookstore@gmail.com
+                    </p>
+                </div>
+                <div class="connection">
+                    <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <p>© 2022 NophaneBookstore Designed by Tammy ｜僅個人作品練習，無商業用途</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

@@ -103,7 +103,19 @@ body{
 .menu a:hover{
     color: rgb(246, 112, 112);
 }
-
+.menu a div,.cart div{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    text-align: center;
+    border-radius: 100%;
+}
 .cart{
     display: none;
     height: 70px;
@@ -122,6 +134,10 @@ body{
 }
 .cart:hover{
     background: rgb(246, 112, 112);
+}
+.cart div {
+    top: 5px;
+    right: 5px;
 }
 @media (max-width:650px){
     .header{
@@ -157,7 +173,48 @@ body{
         display: block;
     }
 }
-
+.buycart{
+    position: fixed;
+    background-color: white;
+    top: 60px;
+    width: 350px;
+    height: 350px;
+    overflow-y: auto;
+    border-radius: 10px;
+    z-index: 9999;
+    right: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgb(194, 194, 194);
+}
+.buycart table{
+    width: 100%;
+    text-align: center;
+}
+.buycart table th{
+    background: brown;
+    color: white;
+    padding: 10px;
+}
+.buycart table td{
+    border-bottom: dashed 1px;
+    padding: 10px;
+    font-size: 14px;
+}
+.buycart p{
+    display: inline-block;
+    padding: 10px 0px;
+}
+.buycart button{
+    float: right;
+    margin: 10px 10px;
+}
+@media(max-width:500px){
+    .buycart {
+        top: unset;
+        bottom: 100px;
+        
+    }
+}
 .content{
     width: 100%;
     height: auto;
@@ -177,6 +234,12 @@ body{
     background-position: bottom;
     background-image: url("../images/faq.jpg");
 }
+.content .top3{
+    height: 400px;
+    clip-path: none;
+    background-position: bottom;
+    background-image: url("../images/storebuy.jpg");
+}
 .top .tittle{
     width: 100%;
     position: absolute;
@@ -188,8 +251,8 @@ body{
     line-height: 60px;
     text-shadow: 3px 3px 5px black;
 }
-.top2 .tittle{
-    top: 220px;
+.top2 .tittle,.top3 .tittle{
+    top: 190px;
 }
 @media(max-width:450px){
     .top2 .tittle{
@@ -557,6 +620,7 @@ body{
     }
 }
 .content .infomail{
+    clear: both;
     width: 100%;
     background: rgb(190, 161, 161);
     text-align: center;
@@ -613,7 +677,76 @@ body{
         font-size: 15px;
     }
 }
+.content .books{
+    width: 70%;
+    height: auto;
+    margin: 50px auto;
+}
+.books .category{
+    float: left;
+    height: 100%;
+    width: 150px;
+    border-right: dashed 3px rgb(73, 38, 38);
+    margin-right: 15px;
+}
+.category ul li{
+    padding: 10px;
+    margin: 15px;
+    transition: 0.1s;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+}
+.category ul li:hover{
+    background: rgb(73, 38, 38);
+    color: white;
+}
+@media(max-width:500px) {
+    .books .category {
+        max-height: 0;
+        overflow: hidden;
+    }
+}
+.books .products{
+    display: flex;
+    margin-bottom: 50px;
+}
+.products ul li{
+    border: solid 1px rgb(209, 209, 209);
+    border-radius: 5px;
+    float: left;
+    width: 225px;
+    padding: 5px;
+    margin: 5px;
+}
+.products ul li h1{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 900;
+    color: rgb(73, 38, 38);
+}
+.products ul li p{
+    font-weight: 900;
+    padding: 5px;
+    color: brown;
+}
+
+.products ul li i{
+    padding: 10px;
+    font-size: 26px;
+    float: right;
+    color: rgb(73, 38, 38);
+}
+@media(max-width:500px) {
+    .products ul{
+        text-align: center;
+    }
+    .products ul li {
+        width: 300px;
+    }
+}
 .footer{
+    clear: both;
     width: 100%;
     background: rgb(73, 38, 38);
 }

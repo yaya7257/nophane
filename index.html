@@ -13,21 +13,25 @@
     <title>諾芬尼書城</title>
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap" id="wrap">
         <div class="header">
             <div class="menushow"><a href=""><i class="fa-solid fa-bars"></i></a></div>
             <a href="index.html"><img src="images/logo.png" alt=""></a>
             <ul class="menu">
-                <li><a href="">商店</a></li>
+                <li><a href="store.html">商店</a></li>
                 <li><a href="faq.html">Q&A</a></li>
-                <li class="showchar"><a href="" >購物車 <i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="showchar" @click="openCart">
+                    <a href="">
+                        購物車<i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="content">
             <div class="top">
                 <div class="tittle">
                     <h1 data-aos="zoom-in" data-aos-duration="1500">買一本好書</h1><h1 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">享受屬於你的寧靜時光</h1>
-                    <input class="btn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" type="button" value="購書去 ➜">
+                    <input onclick="location.href='store.html'" class="btn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" type="button" value="購書去 ➜">
                 </div>
             </div>
             <div class="about">
@@ -94,13 +98,13 @@
                         </div>
                     </li>
                 </ul>
-                <input class="btn" data-aos="zoom-out" data-aos-duration="2000" type="button" value="買書去 ➜">
+                <input onclick="location.href='store.html'" class="btn" data-aos="zoom-out" data-aos-duration="2000" type="button" value="買書去 ➜" >
             </div>
             <div class="infomail">
                 <form action="index.html">
                     <h1>想要知道更多店內資訊？現在就留下的你的</h1>
                     <input type="email" placeholder="e-mail">
-                    <input class="btn" type="submit" value="➜">
+                    <input  class="btn" type="submit" value="➜">
                 </form>
             </div>
         </div>
