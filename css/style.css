@@ -216,19 +216,25 @@ body{
     }
 }
 .smallcate {
+    display: none;
     height: auto;
     width: 80px;
     position: fixed;
     left: 20px;
     bottom: 0px;
     background: rgb(255, 230, 198);
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     color: rgb(122, 75, 75);
     font-size: 16px;
     line-height: 40px;
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+}
+@media (max-width:500px) {
+    .smallcate{
+        display: block;
+    }
 }
 .content{
     width: 100%;
