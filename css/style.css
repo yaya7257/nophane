@@ -178,7 +178,7 @@ body{
     background-color: white;
     top: 60px;
     width: 350px;
-    height: 350px;
+    max-height: 350px;
     overflow-y: auto;
     border-radius: 10px;
     z-index: 9999;
@@ -208,7 +208,7 @@ body{
     float: right;
     margin: 10px 10px;
 }
-@media(max-width:500px){
+@media(max-width:650px){
     .buycart {
         top: unset;
         bottom: 100px;
@@ -736,6 +736,11 @@ body{
     font-size: 26px;
     float: right;
     color: rgb(73, 38, 38);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.products ul li i:hover {
+    color: brown;
 }
 @media(max-width:500px) {
     .products ul{
