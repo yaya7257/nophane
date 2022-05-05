@@ -487,6 +487,7 @@ body{
     background-image: url("../images/stayhere.jpg");
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     /* background-size:cover; */
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
     position: relative;
