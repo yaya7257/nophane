@@ -242,7 +242,7 @@ body{
 }
 .content .top{
     width: 100%;
-    height: 800px;
+    height: 100vh;
     background-image: url("../images/bg4.jpg");
     background-size: cover;
     background-position: center;
@@ -264,7 +264,7 @@ body{
 .top .tittle{
     width: 100%;
     position: absolute;
-    top: 300px;
+    top: 35vh;
     text-align: center;
     color: white;
     font-weight: 900;
@@ -289,11 +289,25 @@ body{
     background: rgb(211, 61, 61);
     cursor: pointer;
     transition: 0.3s;
+    margin: 0 auto;
 }
 .btn:hover{
     background: rgb(255, 98, 98);
 }
-
+.bbtn{
+    text-align: center;
+    margin: 50px;
+}
+.adown{
+    width: 100%;
+    position: absolute;
+    bottom: 16%;
+    text-align: center;
+}
+.adown i{
+    font-size: 40px;
+    color: rgba(255, 255, 255,0.7);
+}
 .content .about{
     max-width: 100%;
     margin: 150px auto;
@@ -487,7 +501,8 @@ body{
     background-image: url("../images/stayhere.jpg");
     background-attachment: fixed;
     background-position: center;
-    background-size:cover;
+    background-repeat: no-repeat;
+    /* background-size:cover; */
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
     position: relative;
     margin-top: 50px;
@@ -574,9 +589,6 @@ body{
     font-size: 20px;
     line-height: 26px;
 }
-.newbook .btn{
-    margin-top: 20px;
-}
 @media (max-width:1050px){
     .content .newbook{
         width: 70%;
@@ -639,6 +651,10 @@ body{
         width: 80%;
         padding-top: 10px;
     }
+}
+.smap iframe{
+    width: 100%;
+    height: 500px;
 }
 .content .infomail{
     clear: both;

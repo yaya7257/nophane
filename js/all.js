@@ -133,4 +133,5 @@ $(document).ready(function () {
 
     };
     Vue.createApp(App).mount('#wrap');
+    
 });
